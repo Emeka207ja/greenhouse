@@ -11,8 +11,15 @@ import {
     CardBody
 } from "@chakra-ui/react";
 import {GrFormNext} from "react-icons/gr"
-
+import { ChangeEvent, useState } from "react";
 export const HomePage: React.FC = () => {
+    const [time,setTime] = useState("")
+    const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
+        setTime(e.target.value)
+    }
+    const submitHandler = (e: ChangeEvent<HTMLFormElement>) => {
+       e.preventDefault()
+    }
     return (
         <Container>
             <Center>
@@ -25,29 +32,22 @@ export const HomePage: React.FC = () => {
                 />
             </Center>
             <Center mt={"2rem"}>
-                <Image
-                    borderRadius={"md"}
-                    objectFit="cover"
-                    src="/assets/images/kids2.jpeg"
-                    width={"20rem"}
-                />
+                <video width="640" height="360" controls playsInline autoPlay muted loop>
+                    <source src="/assets/video/vid1.mp4" type="video/mp4" />
+                </video>
             </Center>
 
-            <Center mt={"2rem"}>
-                <Card>
-                    <CardBody>
-                        <Text fontSize={"0.8rem"}>Do you know smartphones increases climate change?</Text>
-                    </CardBody>
-                </Card>
-            </Center>
-
-            <Center mt={"1rem"}>
-                <Card>
-                    <CardBody>
-                        <Text fontSize={"0.8rem"}>Want to know how much yours does - and know you can help?</Text>
-                    </CardBody>
-                </Card>
-            </Center>
+            <Card mt={"1rem"}>
+                <CardBody>
+                    <Text fontSize={"0.8rem"}>Do you know smartphones increases climate change?</Text>
+                </CardBody>
+            </Card>
+         
+            <Card mt={"1rem"}>
+                <CardBody>
+                    <Text fontSize={"0.8rem"}>Want to know how much yours does - and know you can help?</Text>
+                </CardBody>
+            </Card>
 
             <Card mt={"1rem"}>
                 <CardBody>
@@ -59,15 +59,15 @@ export const HomePage: React.FC = () => {
                 <CardBody>
                     <form>
                         <FormControl>
-                            <Select fontSize={"0.8rem"}>
+                            <Select fontSize={"0.8rem"} value={time} onChange={handleChange}>
                                 <option value={""}  >please select</option>
-                                <option>2 minutes</option>
-                                <option>10 minutes</option>
-                                <option>15 minutes</option>
-                                <option>30 minutes</option>
-                                <option>1 hour</option>
-                                <option>2 hours</option>
-                                <option>3 hours</option>
+                                <option value={"2m"}>2 minutes</option>
+                                <option value={"10m"}>10 minutes</option>
+                                <option value={"15m"}>15 minutes</option>
+                                <option value={"30m"}>30 minutes</option>
+                                <option value={"1hr"}>1 hour</option>
+                                <option value={"2hr"}>2 hours</option>
+                                <option value={"3hr"}>3 hours</option>
                         </Select>
                         </FormControl>
                     </form>
@@ -75,7 +75,12 @@ export const HomePage: React.FC = () => {
             </Card>
             
             <Center mt={"1rem"}>
-                <Button rightIcon={<GrFormNext />} colorScheme='blue' variant='outline'>
+                <Button
+                    rightIcon={<GrFormNext />} 
+                    colorScheme='blue' variant='outline'
+                    as={"a"} href={`/pagetwo?time=${time}`}
+                    isDisabled={time.length <= 0}
+                >
                    next
                 </Button>
             </Center>

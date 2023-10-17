@@ -59,10 +59,10 @@ interface LinkItemProps {
 }
 const LinkItems: LinkItemProps[] = [
   { name: 'Home', icon: FiHome, url:"/" },
-  { name: 'Sign up', icon: AiOutlineUserAdd,url:"/signup" },
-  { name: 'Login', icon: AiOutlineUserAdd,url:"/login" },
+  // { name: 'Sign up', icon: AiOutlineUserAdd,url:"/signup" },
+  // { name: 'Login', icon: AiOutlineUserAdd,url:"/login" },
   { name: 'About us', icon: SiAuthy, url:"/aboutus" },
-  { name: 'T and C', icon: MdOutlinePolicy , url:"/tc" },
+  // { name: 'T and C', icon: MdOutlinePolicy , url:"/tc" },
 ];
 
 export default function NotAuthHeader({
