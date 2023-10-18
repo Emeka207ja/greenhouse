@@ -43,19 +43,19 @@ export const HomePage: React.FC = () => {
                 </CardBody>
             </Card>
          
-            <Card mt={"1rem"}>
+            <Card mt={"0.5rem"}>
                 <CardBody>
                     <Text fontSize={"0.8rem"}>Want to know how much yours does - and know you can help?</Text>
                 </CardBody>
             </Card>
 
-            <Card mt={"1rem"}>
+            <Card mt={"0.5rem"}>
                 <CardBody>
                     <Text fontSize={"0.8rem"}>How long each day do you use it?</Text>
                 </CardBody>
             </Card>
                
-            <Card mt={"1rem"}>
+            <Card mt={"0.4rem"}>
                 <CardBody>
                     <form>
                         <FormControl>
@@ -78,7 +78,7 @@ export const HomePage: React.FC = () => {
                 <Button
                     rightIcon={<GrFormNext />} 
                     colorScheme='blue' variant='outline'
-                    as={"a"} href={`/pagetwo?time=${time}`}
+                    as={"a"} href={time.length<=0?"#":`/pagetwo?time=${time}`}
                     isDisabled={time.length <= 0}
                 >
                    next
