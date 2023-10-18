@@ -37,7 +37,7 @@ export const Pagetwo: React.FC = () => {
                 />
             </Center>
             <Center mt={"1rem"}>
-                <video width="640" height="360" controls playsInline autoPlay muted loop>
+                <video width="640" height="360" controls playsInline autoPlay muted loop style={{borderRadius:"1rem"}}>
                     <source src="/assets/video/vid2.mp4" type="video/mp4" />
                 </video>
             </Center>

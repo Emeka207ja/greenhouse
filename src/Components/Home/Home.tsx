@@ -31,8 +31,8 @@ export const HomePage: React.FC = () => {
                     boxSize='100px'
                 />
             </Center>
-            <Center mt={"2rem"}>
-                <video width="640" height="360" controls playsInline autoPlay muted loop>
+            <Center mt={"2rem"} >
+                <video width="640" height="360" controls playsInline autoPlay muted loop style={{borderRadius:"1.5rem"}}>
                     <source src="/assets/video/vid1.mp4" type="video/mp4" />
                 </video>
             </Center>
