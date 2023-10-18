@@ -21,7 +21,9 @@ export const HomePage: React.FC = () => {
        e.preventDefault()
     }
     return (
-        <Container>
+        <Container
+           
+        >
             <Center>
                 <Image
                     src="/assets/images/icon.jpg"

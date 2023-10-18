@@ -76,7 +76,14 @@ export default function NotAuthHeader({
   
     // const { colorMode, toggleColorMode } = useColorMode()
   return (
-    <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
+    <Box
+      minH="100vh"
+      bg={useColorModeValue('gray.100', 'gray.900')}
+      backgroundImage="url('/assets/images/background.png')"
+      backgroundSize="cover"
+      backgroundPosition="center"
+      minHeight="100vh"
+    >
       <SidebarContent
         onClose={() => onClose}
         display={{ base: 'none', md: 'block' }}
