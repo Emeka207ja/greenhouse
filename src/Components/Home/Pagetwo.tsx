@@ -12,18 +12,39 @@ import {
     Button
 } from "@chakra-ui/react"
 import { GrFormNext } from "react-icons/gr"
-import {useState,useEffect,ChangeEvent} from "react"
+import { useState, useEffect, ChangeEvent } from "react"
+import { sunderland,south_tyneside,north_tyneside,gateshead,newcastle,ilocation } from "./location"
 export const Pagetwo: React.FC = () => {
     const [pagetwoQtn, setPagetwoQtn] = useState<{ sch: string, area: string, town: string }>({ sch: "", area: "", town: "" })
+    const [area,setArea] = useState<ilocation[]|[]>([])
 
     const handleChange = (e: React.SyntheticEvent) => {
         const target = e.target as HTMLFormElement
         setPagetwoQtn(
             prev => ({ ...prev, [target.name]: target.value }))
     }
-//     useEffect(() => {
-//         console.log(pagetwoQtn)
-    //    },[pagetwoQtn])
+    useEffect(() => {
+       switch (pagetwoQtn.town) {
+        case "gateshead":
+            setArea(gateshead)
+            break;
+        case "newcastle":
+            setArea(newcastle)
+            break;
+        case "north_Tyneside":
+            setArea(north_tyneside)
+            break;
+        case "south_Tyneside":
+            setArea(south_tyneside)
+            break;
+           case "sunderland":
+            setArea(sunderland)
+            break;
+        default:
+            setArea([])
+        break;
+       }
+    },[pagetwoQtn.town])
 
     return (
         <Container>
@@ -85,11 +106,9 @@ export const Pagetwo: React.FC = () => {
                             <FormLabel fontSize={"0.8rem"}>which is your area</FormLabel>
                             <Select fontSize={"0.8rem"} name="area" value={pagetwoQtn.area} onChange={handleChange}>
                                 <option value={""}>please choose</option>
-                                <option value={"chopwell_rowlands"}>Chopwell and Rowlands Gill</option>
-                                <option value={"birtley"}>Birtley</option>
-                                <option value={"blaydon"}>Blaydon</option>
-                                <option value={"bridges"}>Bridges</option>
-                                <option value={"sunderland"}>Chowdene</option>
+                                {
+                                    area.length > 0 && area.map(item => <option key={item.id} value={item.name}>{item.name }</option>)
+                                }
                             </Select>
                         </FormControl>
                     </form>
