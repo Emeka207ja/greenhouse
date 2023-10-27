@@ -12,12 +12,19 @@ import {
     Button
 } from "@chakra-ui/react"
 import { GrFormNext } from "react-icons/gr"
-import { useState, useEffect, ChangeEvent } from "react"
+import { useState, useEffect, ChangeEvent,useRef } from "react"
 import { sunderland,south_tyneside,north_tyneside,gateshead,newcastle,ilocation } from "./location"
 export const Pagetwo: React.FC = () => {
     const [pagetwoQtn, setPagetwoQtn] = useState<{ sch: string, area: string, town: string }>({ sch: "", area: "", town: "" })
     const [area, setArea] = useState<ilocation[] | []>([])
-    const [videoLoaded,setLoaded] = useState(false)
+    const [videoLoaded, setLoaded] = useState(false)
+    const playRef = useRef<HTMLVideoElement|null>(null)
+    const setControls = () => {
+        setLoaded(true);
+        if (playRef.current) {
+            playRef.current.play()
+        }
+    }
 
     const handleChange = (e: React.SyntheticEvent) => {
         const target = e.target as HTMLFormElement
@@ -85,8 +92,10 @@ export const Pagetwo: React.FC = () => {
                     autoPlay
                     muted
                     loop
+                    controls={false}
                     style={{ borderRadius: "1rem" }}
-                    onLoadedData={()=>setLoaded(true)}
+                    onLoadedData={setControls}
+                    ref={playRef}
                 >
                     <source src="https://drive.google.com/uc?export=download&id=1xUjf4b4nwdRLT-HaLyc2Jf2ranLAgegC" type="video/mp4" />
                 </video>
