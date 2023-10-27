@@ -61,7 +61,7 @@ const LinkItems: LinkItemProps[] = [
   { name: 'Home', icon: FiHome, url:"/" },
   // { name: 'Sign up', icon: AiOutlineUserAdd,url:"/signup" },
   // { name: 'Login', icon: AiOutlineUserAdd,url:"/login" },
-  { name: 'About us', icon: SiAuthy, url:"/aboutus" },
+  { name: 'About Blue Sky', icon: SiAuthy, url:"/aboutus" },
   // { name: 'T and C', icon: MdOutlinePolicy , url:"/tc" },
 ];
 
@@ -79,7 +79,7 @@ export default function NotAuthHeader({
     <Box
       minH="100vh"
       bg={useColorModeValue('gray.100', 'gray.900')}
-      backgroundImage="url('/assets/images/background.png')"
+      backgroundImage="url('/assets/images/bg2.png')"
       backgroundSize="cover"
       backgroundPosition="center"
       minHeight="100vh"

@@ -16,7 +16,8 @@ import { useState, useEffect, ChangeEvent } from "react"
 import { sunderland,south_tyneside,north_tyneside,gateshead,newcastle,ilocation } from "./location"
 export const Pagetwo: React.FC = () => {
     const [pagetwoQtn, setPagetwoQtn] = useState<{ sch: string, area: string, town: string }>({ sch: "", area: "", town: "" })
-    const [area,setArea] = useState<ilocation[]|[]>([])
+    const [area, setArea] = useState<ilocation[] | []>([])
+    const [videoLoaded,setLoaded] = useState(false)
 
     const handleChange = (e: React.SyntheticEvent) => {
         const target = e.target as HTMLFormElement
@@ -57,11 +58,40 @@ export const Pagetwo: React.FC = () => {
                     boxSize='100px'
                 />
             </Center>
-            <Center mt={"1rem"}>
-                <video width="640" height="360" controls playsInline autoPlay muted loop style={{borderRadius:"1rem"}}>
+            {
+                !videoLoaded && (
+                    <Center mt={"1rem"}>
+                        <video
+                            width="640"
+                            height="360"
+                            playsInline
+                            autoPlay
+                            muted
+                            loop
+                            controls
+                            style={{ borderRadius: "1rem" }}
+                        >
+                            <source src="https://drive.google.com/uc?export=download&id=1xUjf4b4nwdRLT-HaLyc2Jf2ranLAgegC" type="video/mp4" />
+                        </video>
+                    </Center>
+                )
+            }
+           
+            <Center mt={"1rem"} display={videoLoaded?"block":"none"}>
+                <video
+                    width="640"
+                    height="360"
+                    playsInline
+                    autoPlay
+                    muted
+                    loop
+                    style={{ borderRadius: "1rem" }}
+                    onLoadedData={()=>setLoaded(true)}
+                >
                     <source src="https://drive.google.com/uc?export=download&id=1xUjf4b4nwdRLT-HaLyc2Jf2ranLAgegC" type="video/mp4" />
                 </video>
             </Center>
+            
 
             <Card mt={"1rem"}>
                 <CardBody>
