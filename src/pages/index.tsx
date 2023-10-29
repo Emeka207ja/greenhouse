@@ -18,6 +18,9 @@ export default function Home() {
         <link rel="icon" href="/assets/images/icon.jpg" />
       </Head>
       
+      {/* <NotAuthHeader>
+        <HomePage/>
+      </NotAuthHeader> */}
       <NotAuthHeader>
         <HomePage/>
       </NotAuthHeader>

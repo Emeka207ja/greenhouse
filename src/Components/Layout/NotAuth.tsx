@@ -23,7 +23,8 @@ import {
     MenuList,
     useColorMode,
     Button,
-  Stack
+  Stack,
+  
 } from '@chakra-ui/react';
 import {
   FiHome,
@@ -41,7 +42,7 @@ import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { AiOutlineUserAdd } from 'react-icons/ai';
 import { MdOutlinePolicy } from 'react-icons/md';
 import { NextRouter, useRouter } from 'next/router';
-
+import Navlink from "next/link"
 import {FaHistory} from "react-icons/fa"
 import {SiAuthy} from "react-icons/si"
 import { BsFillPeopleFill } from "react-icons/bs"
@@ -84,10 +85,10 @@ export default function NotAuthHeader({
       backgroundPosition="center"
       minHeight="100vh"
     >
-      <SidebarContent
+      {/* <SidebarContent
         onClose={() => onClose}
         display={{ base: 'none', md: 'block' }}
-      />
+      /> */}
       <Drawer
         autoFocus={false}
         isOpen={isOpen}
@@ -96,18 +97,30 @@ export default function NotAuthHeader({
         returnFocusOnClose={false}
         onOverlayClick={onClose}
         size="full">
-        <DrawerContent>
+        {/* <DrawerContent>
           <SidebarContent onClose={onClose} />
-        </DrawerContent>
+        </DrawerContent> */}
       </Drawer>
       {/* mobilenav */}
-      <MobileNav onOpen={onOpen} />
+      {/* <MobileNav onOpen={onOpen} /> */}
       <Box ml={{ base: 0, md: 60 }} p="4">
         {children}
       </Box>
-      {/* {
-        !type&&<Footer/>
-      } */}
+      <footer
+        style={
+          {
+            textAlign: "center",
+            backgroundColor: "#FFA33C",
+            padding: "0.3rem",
+            color: "white",
+            position: "fixed",
+            bottom: 0,
+            left: 0,
+            width:"100%"
+          }
+        }>
+       <Link href={"/about"}  color='white'> About Blue Sky</Link>
+     </footer>
     </Box>
   );
 }

@@ -11,8 +11,10 @@ import {
     CardBody
 } from "@chakra-ui/react";
 import {GrFormNext} from "react-icons/gr"
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useState,useRef,useEffect } from "react";
 export const HomePage: React.FC = () => {
+    const videoRef = useRef<HTMLVideoElement>()
+
     const [time,setTime] = useState("")
     const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
         setTime(e.target.value)
@@ -20,13 +22,18 @@ export const HomePage: React.FC = () => {
     const submitHandler = (e: ChangeEvent<HTMLFormElement>) => {
        e.preventDefault()
     }
+    useEffect(() => {
+        sessionStorage.setItem("page", "/");
+    }, [])
+   
+    
     return (
         <Container
            
         >
             <Center>
                 <Image
-                    src="/assets/images/icon.jpg"
+                    src="/assets/images/icon2.png"
                     alt="icoin"
                    objectFit="cover"
                     borderRadius='full'
@@ -34,35 +41,41 @@ export const HomePage: React.FC = () => {
                 />
             </Center>
             <Center mt={"2rem"} >
-                <video width="640" height="360" playsInline autoPlay muted loop style={{borderRadius:"1.5rem"}}>
+                <video playsInline autoPlay muted loop>
                     <source src="/assets/video/vid1.mp4" type="video/mp4" />
                 </video>
             </Center>
 
-            <Card mt={"1rem"}>
+            <Card mt={"1rem"} bg={"#0174BE"} color={"white"}>
                 <CardBody>
-                    <Text fontSize={"0.8rem"}>Do you know smartphones increases climate change?</Text>
+                    <Center>
+                         <Text fontSize={"0.8rem"} textAlign={"center"}>Do you know smartphones increases climate change?</Text>
+                   </Center>
                 </CardBody>
             </Card>
          
-            <Card mt={"0.5rem"}>
+            <Card mt={"1rem"} bg={"#0174BE"} color={"white"}>
                 <CardBody>
-                    <Text fontSize={"0.8rem"}>Want to know how much yours does - and know you can help?</Text>
+                    <Center>
+                        <Text fontSize={"0.8rem"} textAlign={"center"}>Want to know how much yours does - and know you can help?</Text>
+                    </Center>
                 </CardBody>
             </Card>
 
-            <Card mt={"0.5rem"}>
+            <Card mt={"1rem"} bg={"#0174BE"} color={"white"}>
                 <CardBody>
-                    <Text fontSize={"0.8rem"}>How long each day do you use it?</Text>
+                    <Center>
+                         <Text fontSize={"0.8rem"} textAlign={"center"}>How long each day do you use it?</Text>
+                   </Center>
                 </CardBody>
             </Card>
                
-            <Card mt={"0.4rem"}>
+            <Card mt={"0.4rem"} bg={"#FFA33C"} >
                 <CardBody>
                     <form>
                         <FormControl>
                             <Select fontSize={"0.8rem"} value={time} onChange={handleChange}>
-                                <option value={""}  >please select</option>
+                                <option value={""}>please select</option>
                                 <option value={"2m"}>2 minutes</option>
                                 <option value={"10m"}>10 minutes</option>
                                 <option value={"15m"}>15 minutes</option>
@@ -76,10 +89,11 @@ export const HomePage: React.FC = () => {
                 </CardBody>
             </Card>
             
-            <Center mt={"1rem"}>
+            <Center mt={"1rem"} mb={"1.7rem"}>
                 <Button
                     rightIcon={<GrFormNext />} 
-                    colorScheme='blue' variant='outline'
+                    colorScheme='blue'
+                    variant='outline'
                     as={"a"} href={time.length<=0?"#":`/pagetwo?time=${time}`}
                     isDisabled={time.length <= 0}
                 >
