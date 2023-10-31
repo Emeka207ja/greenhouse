@@ -43,8 +43,8 @@ export const HomePage: React.FC = () => {
                 <Image
                     src="/assets/images/icon2.png"
                     alt="icoin"
-                   objectFit="cover"
-                    boxSize='120px'
+                   objectFit="contain"
+                    boxSize='160px'
                 />
             </Center>
             <Center mt={"2rem"} >
@@ -53,12 +53,12 @@ export const HomePage: React.FC = () => {
                 </video>
             </Center>
 
-            <Card mt={"1rem"} bg={"#0174BE"} color={"white"}>
+            <Card mt={"1rem"} bg={"#285c73"} color={"white"}>
                 <CardBody>
                     <Center>
                         <Box>
-                            <Text fontSize={"0.8rem"} textAlign={"center"}>Do you know smartphones </Text>
-                            <Text fontSize={"0.8rem"} textAlign={"center"}>increases climate change? </Text>
+                            <Text fontSize={"1.2rem"} textAlign={"center"} fontFamily={"Bree Serif"}>Do you know smartphones </Text>
+                            <Text fontSize={"1.2rem"} textAlign={"center"} fontFamily={"Bree Serif"}>increases climate change? </Text>
                          </Box>
                    </Center>
                 </CardBody>
@@ -75,21 +75,21 @@ export const HomePage: React.FC = () => {
                 )
             } */}
          
-            <Card mt={"1rem"} bg={"#0174BE"} color={"white"}>
+            <Card mt={"1rem"} bg={"#285c73"} color={"white"}>
                 <CardBody>
                     <Center>
                         <Box>
-                            <Text fontSize={"0.8rem"} textAlign={"center"}>Want to know how much yours </Text>
-                            <Text>does - and know you can help?</Text>
+                            <Text fontSize={"1.2rem"} textAlign={"center"} fontFamily={"Bree Serif"}>Want to know how much yours </Text>
+                            <Text fontSize={"1.2rem"} textAlign={"center"} fontFamily={"Bree Serif"}>does - and know you can help?</Text>
                         </Box>
                     </Center>
                 </CardBody>
             </Card>
 
-            <Card mt={"1rem"} bg={"#FFA33C"} color={"white"}>
+            <Card mt={"1rem"} bg={"#CD5C08"} color={"white"}>
                 <CardBody>
                     <Center>
-                         <Text fontSize={"0.8rem"} textAlign={"center"}>How long each day do you use it?</Text>
+                         <Text fontSize={"1.1rem"} textAlign={"center"}>How long each day do you use it?</Text>
                    </Center>
                 </CardBody>
             </Card>
@@ -97,7 +97,7 @@ export const HomePage: React.FC = () => {
             <form style={{marginTop:"1rem"}}>
                 <FormControl>
                     <Select
-                        fontSize={"0.8rem"}
+                        fontSize={"1.2rem"}
                         value={time}
                         onChange={handleChange}
                         style={{ borderColor: "blue", backgroundColor: "", textAlign: "center" }}
