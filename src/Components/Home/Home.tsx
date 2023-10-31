@@ -53,7 +53,7 @@ export const HomePage: React.FC = () => {
                 </video>
             </Center>
 
-            <Card mt={"1rem"} bg={"#285c73"} color={"white"}>
+            <Card mt={"1rem"} bg={"#306e8a"} color={"white"}>
                 <CardBody>
                     <Center>
                         <Box>
@@ -75,7 +75,7 @@ export const HomePage: React.FC = () => {
                 )
             } */}
          
-            <Card mt={"1rem"} bg={"#285c73"} color={"white"}>
+            <Card mt={"1rem"} bg={"#306e8a"} color={"white"}>
                 <CardBody>
                     <Center>
                         <Box>
