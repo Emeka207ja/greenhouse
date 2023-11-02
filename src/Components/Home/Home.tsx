@@ -48,8 +48,14 @@ export const HomePage: React.FC = () => {
                 />
             </Center>
             <Center mt={"2rem"} >
-                <video playsInline autoPlay muted loop>
-                    <source src="/assets/video/vid1.mp4" type="video/mp4" />
+                <video
+                    playsInline
+                    autoPlay
+                    muted
+                    loop
+                    height="360"
+                >
+                    <source src="/assets/video/vd3.mp4" type="video/mp4" />
                 </video>
             </Center>
 
