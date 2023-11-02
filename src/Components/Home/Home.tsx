@@ -92,7 +92,7 @@ export const HomePage: React.FC = () => {
                 </CardBody>
             </Card>
 
-            <Card mt={"1rem"} bg={"#CD5C08"} color={"white"}>
+            <Card mt={"1rem"} bg={"#FF8400"} color={"white"}>
                 <CardBody>
                     <Center>
                          <Text fontSize={"1.1rem"} textAlign={"center"}>How long each day do you use it?</Text>
@@ -106,9 +106,9 @@ export const HomePage: React.FC = () => {
                         fontSize={"1.2rem"}
                         value={time}
                         onChange={handleChange}
-                        style={{ borderColor: "blue", backgroundColor: "", textAlign: "center" }}
+                        style={{ borderColor: "#306e8a", backgroundColor: "", textAlign: "center" }}
                         iconSize="6rem"
-                        iconColor="blue"
+                        iconColor="#306e8a"
                         icon={<AiOutlineCaretDown/>}
                     >
                         <option value={""} style={{textAlign:"center"}}>please choose</option>
@@ -126,10 +126,10 @@ export const HomePage: React.FC = () => {
             <Center mt={"1rem"} mb={"1.7rem"}>
                 <Button
                     rightIcon={<GrFormNext />} 
-                    colorScheme='blue'
-                    variant='outline'
+                    color={"white"}
                     as={"a"} href={time.length<=0?"#":`/pagetwo?time=${time}`}
                     isDisabled={time.length <= 0}
+                    bg={"#306e8a"}
                 >
                    next
                 </Button>

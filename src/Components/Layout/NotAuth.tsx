@@ -110,7 +110,7 @@ export default function NotAuthHeader({
         style={
           {
             textAlign: "center",
-            backgroundColor: "#FFA33C",
+            backgroundColor: "#FF8400",
             padding: "0.3rem",
             color: "white",
             position: "fixed",

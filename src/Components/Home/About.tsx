@@ -66,10 +66,10 @@ export const About: React.FC = () => {
                 </Text>
             </Center>
 
-            <Center mt={"0.5rem"}>
+            <Center mt={"0.5rem"} mb={"2rem"}>
                 <Text textAlign={"center"}>All that’s needed is a little more Blue Sky thinking! </Text>
             </Center>
-
+            
             <BackToTopButton route={pathd}/>
         </Container>
     )

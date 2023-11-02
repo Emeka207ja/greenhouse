@@ -14,7 +14,8 @@ import {
 import { useSearchParams } from 'next/navigation'
 import { GrFormNext } from "react-icons/gr"
 import { useState, useEffect, ChangeEvent,useRef } from "react"
-import { sunderland,south_tyneside,north_tyneside,gateshead,newcastle,ilocation } from "./location"
+import { sunderland, south_tyneside, north_tyneside, gateshead, newcastle, ilocation } from "./location"
+import { AiOutlineCaretDown } from "react-icons/ai";
 export const Pagetwo: React.FC = () => {
     const [pagetwoQtn, setPagetwoQtn] = useState<{ sch: string, area: string, town: string }>({ sch: "", area: "", town: "" })
     const [area, setArea] = useState<ilocation[] | []>([])
@@ -74,9 +75,9 @@ export const Pagetwo: React.FC = () => {
                 <Image
                     src="/assets/images/icon2.png"
                     alt="icoin"
-                   objectFit="cover"
+                   objectFit="contain"
                     borderRadius='full'
-                    boxSize='100px'
+                    boxSize='150px'
                 />
             </Center>
             {
@@ -116,75 +117,109 @@ export const Pagetwo: React.FC = () => {
             </Center>
             
 
-            <Card mt={"1rem"}  bg={"#0174BE"} color={"white"}>
+            <Card mt={"1rem"}  bg={"#306e8a"} color={"white"}>
                 <CardBody>
                     <Center>
-                        <Text fontSize={"0.8rem"} textAlign={"center"}>Now we are going to ask you 3 simple questions</Text>
+                        <Box>
+                            <Text fontSize={"1.2rem"} textAlign={"center"} fontFamily={"Bree Serif"}>Now we are going to ask you </Text>
+                            <Text fontSize={"1.2rem"} textAlign={"center"} fontFamily={"Bree Serif"}>3 simple questions</Text>
+                       </Box>
                     </Center>
                 </CardBody>
             </Card>
          
-            <Center mt={"0.5rem"}>
-                <Card  bg={"#0174BE"} color={"white"}>
+                <Card  bg={"#306e8a"} color={"white"} mt={"1rem"}>
                     <CardBody>
-                        <Center textAlign={"center"}>
-                            <Text fontSize={"0.8rem"}>Do not worry, we are not storing any personal data - this just allows us to calculate how much you and your friends can help with climate change</Text>
-                        </Center>
+                        <Box>
+                            <Text fontSize={"1.1rem"} textAlign={"center"} fontFamily={"Bree Serif"}>Do not worry, we are not storing any </Text>
+                            <Text fontSize={"1.2rem"} textAlign={"center"} fontFamily={"Bree Serif"}> personal data - this just allows us</Text>
+                            <Text fontSize={"1.1rem"} textAlign={"center"} fontFamily={"Bree Serif"}>to calculate how much you and your </Text>
+                            <Text fontSize={"1.1rem"} textAlign={"center"} fontFamily={"Bree Serif"}>friends can help with climate change</Text>
+                        </Box>
                     </CardBody>
                 </Card>
-            </Center>
+            
             <Box mt={"1rem"}>
                 <form>
-                    <Card bg={"#FFA33C"}>
+                    <Card bg={"#FF8400"}>
                         <CardBody>
-                            <FormControl mb={"1rem"}>
-                                <FormLabel fontSize={"0.8rem"}  color={"white"}>Which of these describes you?</FormLabel>
-                                <Select fontSize={"0.8rem"} name="sch" value={pagetwoQtn.sch} onChange={handleChange}>
-                                    <option value={""}>please choose</option>
-                                    <option value={"secondary"}>Secondary School (11 - 16yrs)</option>
-                                    <option value={"a-level"}>A-level or College (16-18yrs)</option>
-                                    <option value={"uni"}>University Student  (18-22yrs)</option>
-                                </Select>
-                            </FormControl>
+                            <Text fontSize={"1.2rem"} textAlign={"center"} fontFamily={"Bree Serif"}  color={"white"}>Which of these describes you?</Text>
                         </CardBody>
                     </Card>
+                    <FormControl mb={"1rem"} mt={"1rem"}>  
+                        <Select
+                            name="sch"
+                            value={pagetwoQtn.sch}
+                            onChange={handleChange}
+                            fontSize={"1.2rem"}
+                            style={{ borderColor: "#306e8a", backgroundColor: "", textAlign: "center" }}
+                            iconSize="6rem"
+                            iconColor="#306e8a"
+                            icon={<AiOutlineCaretDown/>}
+                        >
+                            <option value={""}>please choose</option>
+                            <option value={"secondary"}>Secondary School (11 - 16yrs)</option>
+                            <option value={"a-level"}>A-level or College (16-18yrs)</option>
+                            <option value={"uni"}>University Student  (18-22yrs)</option>
+                        </Select>
+                    </FormControl>
 
-                    <Card mt={"0.5rem"} bg={"#FFA33C"}>
+                    <Card mt={"0.5rem"} bg={"#FF8400"}>
                         <CardBody>
-                            <FormControl mb={"1rem"}>
-                                <FormLabel fontSize={"0.8rem"} color={"white"}>which is your town/city?</FormLabel>
-                                <Select fontSize={"0.8rem"} name="town" value={pagetwoQtn.town} onChange={handleChange}>
-                                    <option value={""}>please choose</option>
-                                    <option value={"gateshead"}>Gateshead</option>
-                                    <option value={"newcastle"}>Newcastle</option>
-                                    <option value={"north_Tyneside"}>North Tyneside</option>
-                                    <option value={"south_Tyneside"}>South Tyneside</option>
-                                    <option value={"sunderland"}>Sunderland</option>
-                                </Select>
-                            </FormControl>
+                            <Text fontSize={"1.2rem"} textAlign={"center"} fontFamily={"Bree Serif"} color={"white"}>which is your town/city?</Text>
                         </CardBody>
-                   </Card>
+                    </Card>
+                    <FormControl mb={"1rem"} mt={"1rem"}>
+                               
+                        <Select
+                            name="town"
+                            value={pagetwoQtn.town}
+                            onChange={handleChange}
+                            fontSize={"1.2rem"}
+                            style={{ borderColor: "#306e8a", backgroundColor: "", textAlign: "center" }}
+                            iconSize="6rem"
+                            iconColor="#306e8a"
+                            icon={<AiOutlineCaretDown/>}
+                        >
+                            <option value={""}>please choose</option>
+                            <option value={"gateshead"}>Gateshead</option>
+                            <option value={"newcastle"}>Newcastle</option>
+                            <option value={"north_Tyneside"}>North Tyneside</option>
+                            <option value={"south_Tyneside"}>South Tyneside</option>
+                            <option value={"sunderland"}>Sunderland</option>
+                        </Select>
+                    </FormControl>
 
-                    <Card mt={"0.5rem"} bg={"#FFA33C"}>
+                    <Card mt={"0.5rem"}  bg={"#FF8400"}>
                         <CardBody>
-                            <FormControl mb={"1rem"}>
-                                <FormLabel fontSize={"0.8rem"}  color={"white"}>which is your area</FormLabel>
-                                <Select fontSize={"0.8rem"} name="area" value={pagetwoQtn.area} onChange={handleChange}>
-                                    <option value={""}>please choose</option>
-                                    {
-                                        area.length > 0 && area.map(item => <option key={item.id} value={item.name}>{item.name }</option>)
-                                    }
-                                </Select>
-                            </FormControl>
+                            <Text fontSize={"1.2rem"} textAlign={"center"} fontFamily={"Bree Serif"}  color={"white"}>which is your area</Text>
                         </CardBody>
-                   </Card>
+                    </Card>
+                    <FormControl mb={"0.7rem"} mt={"1rem"}>     
+                        <Select
+                            name="area"
+                            value={pagetwoQtn.area}
+                            onChange={handleChange}
+                            fontSize={"1.2rem"}
+                            style={{ borderColor: "#306e8a", backgroundColor: "", textAlign: "center" }}
+                            iconSize="6rem"
+                            iconColor="#306e8a"
+                            icon={<AiOutlineCaretDown/>}
+                        >
+                            <option value={""}>please choose</option>
+                            {
+                                area.length > 0 && area.map(item => <option key={item.id} value={item.name}>{item.name }</option>)
+                            }
+                        </Select>
+                    </FormControl>
                 </form>
             </Box>
             <Center mt={"0.8rem"} mb={"1.7rem"}>
                 <Button
                     rightIcon={<GrFormNext />} 
-                    colorScheme='blue' variant='outline'
+                    bg={"#306e8a"}
                     as={"a"} href="#"
+                    color={"white"}
                 >
                    next
                 </Button>
