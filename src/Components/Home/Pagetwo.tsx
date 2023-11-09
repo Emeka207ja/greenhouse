@@ -100,7 +100,7 @@ export const Pagetwo: React.FC = () => {
                     muted
                     loop
                     controls={false}
-                    style={{ borderRadius: "1rem" }}
+                    
                     onLoadedData={setControls}
                     ref={playRef}
                 >
