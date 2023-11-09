@@ -164,7 +164,7 @@ export const PageThree: React.FC = () => {
                             textAlign={"center"}
                             fontFamily={"Bree Serif"}
                         >
-                            <Text>That's the same as 500</Text>
+                            <Text>Thats the same as 500</Text>
                             <Text>average UK cars produced</Text>
                         </Box>
                     </Center>
