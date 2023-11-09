@@ -16,11 +16,15 @@ import { GrFormNext } from "react-icons/gr"
 import { useState, useEffect, ChangeEvent,useRef } from "react"
 import { sunderland, south_tyneside, north_tyneside, gateshead, newcastle, ilocation } from "./location"
 import { AiOutlineCaretDown } from "react-icons/ai";
+import { useRouter } from "next/router"
+import { tree } from "next/dist/build/templates/app-page"
 export const Pagetwo: React.FC = () => {
     const [pagetwoQtn, setPagetwoQtn] = useState<{ sch: string, area: string, town: string }>({ sch: "", area: "", town: "" })
     const [area, setArea] = useState<ilocation[] | []>([])
+    const [empty,setEmpty] = useState(true)
     const [videoLoaded, setLoaded] = useState(false)
-
+    const router = useRouter()
+      {/* <source src="https://drive.google.com/uc?export=download&id=1xUjf4b4nwdRLT-HaLyc2Jf2ranLAgegC" type="video/mp4" /> */}
     const searchParams = useSearchParams()
 
     const playRef = useRef<HTMLVideoElement | null>(null)
@@ -69,6 +73,11 @@ export const Pagetwo: React.FC = () => {
         
     }, [search])
 
+    useEffect(() => {
+        const isEmpty = pagetwoQtn.area.length <= 0 || pagetwoQtn.sch.length <= 0 || pagetwoQtn.town.length <= 0
+        setEmpty(isEmpty)
+    },[pagetwoQtn.area,pagetwoQtn.sch,pagetwoQtn.town])
+
     return (
         <Container>
             <Center>
@@ -80,26 +89,9 @@ export const Pagetwo: React.FC = () => {
                     boxSize='150px'
                 />
             </Center>
-            {
-                !videoLoaded && (
-                    <Center mt={"1rem"}>
-                        <video
-                            width="640"
-                            height="360"
-                            playsInline
-                            autoPlay
-                            muted
-                            loop
-                            controls
-                           
-                        >
-                            <source src="https://drive.google.com/uc?export=download&id=1xUjf4b4nwdRLT-HaLyc2Jf2ranLAgegC" type="video/mp4" />
-                        </video>
-                    </Center>
-                )
-            }
            
-            <Center mt={"1rem"} display={videoLoaded?"block":"none"}>
+           
+            <Center mt={"1rem"} >
                 <video
                     width="640"
                     height="360"
@@ -112,7 +104,9 @@ export const Pagetwo: React.FC = () => {
                     onLoadedData={setControls}
                     ref={playRef}
                 >
-                    <source src="https://drive.google.com/uc?export=download&id=1xUjf4b4nwdRLT-HaLyc2Jf2ranLAgegC" type="video/mp4" />
+                  
+                    <source src="/assets/video/page2Vid.mp4" type="video/mp4" />
+                    
                 </video>
             </Center>
             
@@ -159,8 +153,8 @@ export const Pagetwo: React.FC = () => {
                         >
                             <option value={""}>please choose</option>
                             <option value={"secondary"}>Secondary School (11 - 16yrs)</option>
-                            <option value={"a-level"}>A-level or College (16-18yrs)</option>
-                            <option value={"uni"}>University Student  (18-22yrs)</option>
+                            <option value={"A-level or college"}>A-level or College (16-18yrs)</option>
+                            <option value={"university"}>University Student  (18-22yrs)</option>
                         </Select>
                     </FormControl>
 
@@ -218,11 +212,14 @@ export const Pagetwo: React.FC = () => {
                 <Button
                     rightIcon={<GrFormNext />} 
                     bg={"#306e8a"}
-                    as={"a"} href="#"
+                    as={"a"}
+                    // href={!empty ? `/pagethree?sch=${pagetwoQtn.sch}&town=${pagetwoQtn.town}&area=${pagetwoQtn.area}&time=${search}` : "#"}
+                    href={"#"}
                     color={"white"}
                 >
                    next
                 </Button>
+
            </Center>
         </Container>
     )
