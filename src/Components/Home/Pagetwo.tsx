@@ -124,10 +124,10 @@ export const Pagetwo: React.FC = () => {
                 <Card  bg={"#306e8a"} color={"white"} mt={"1rem"}>
                     <CardBody>
                         <Box>
-                            <Text fontSize={"1.1rem"} textAlign={"center"} fontFamily={"Bree Serif"}>Do not worry, we are not storing any </Text>
-                            <Text fontSize={"1.2rem"} textAlign={"center"} fontFamily={"Bree Serif"}> personal data - this just allows us</Text>
-                            <Text fontSize={"1.1rem"} textAlign={"center"} fontFamily={"Bree Serif"}>to calculate how much you and your </Text>
-                            <Text fontSize={"1.1rem"} textAlign={"center"} fontFamily={"Bree Serif"}>friends can help with climate change</Text>
+                            <Text fontSize={"1rem"} textAlign={"center"} fontFamily={"Bree Serif"}>Do not worry, we are not storing any </Text>
+                            <Text fontSize={"1rem"} textAlign={"center"} fontFamily={"Bree Serif"}> personal data - this just allows us</Text>
+                            <Text fontSize={"1rem"} textAlign={"center"} fontFamily={"Bree Serif"}>to calculate how much you and your </Text>
+                            <Text fontSize={"1rem"} textAlign={"center"} fontFamily={"Bree Serif"}>friends can help with climate change</Text>
                         </Box>
                     </CardBody>
                 </Card>
