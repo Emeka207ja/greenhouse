@@ -85,8 +85,8 @@ export const HomePage: React.FC = () => {
                 <CardBody>
                     <Center>
                         <Box>
-                            <Text fontSize={"1.2rem"} textAlign={"center"} fontFamily={"Bree Serif"}>Want to know how much yours </Text>
-                            <Text fontSize={"1.2rem"} textAlign={"center"} fontFamily={"Bree Serif"}>does - and know you can help?</Text>
+                            <Text fontSize={"1rem"} textAlign={"center"} fontFamily={"Bree Serif"}>Want to know how much yours </Text>
+                            <Text fontSize={"1rem"} textAlign={"center"} fontFamily={"Bree Serif"}>does - and know you can help?</Text>
                         </Box>
                     </Center>
                 </CardBody>
