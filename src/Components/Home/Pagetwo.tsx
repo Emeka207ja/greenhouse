@@ -82,7 +82,7 @@ export const Pagetwo: React.FC = () => {
         <Container>
             <Center>
                 <Image
-                    src="/assets/images/icon2.png"
+                    src="/assets/images/logo3.png"
                     alt="icoin"
                    objectFit="contain"
                     borderRadius='full'
@@ -100,7 +100,6 @@ export const Pagetwo: React.FC = () => {
                     muted
                     loop
                     controls={false}
-                    
                     onLoadedData={setControls}
                     ref={playRef}
                 >
@@ -213,8 +212,8 @@ export const Pagetwo: React.FC = () => {
                     rightIcon={<GrFormNext />} 
                     bg={"#306e8a"}
                     as={"a"}
-                    // href={!empty ? `/pagethree?sch=${pagetwoQtn.sch}&town=${pagetwoQtn.town}&area=${pagetwoQtn.area}&time=${search}` : "#"}
-                    href={"#"}
+                    href={!empty ? `/pagethree?sch=${pagetwoQtn.sch}&town=${pagetwoQtn.town}&area=${pagetwoQtn.area}&time=${search}` : "#"}
+                    // href={"#"}
                     color={"white"}
                 >
                    next

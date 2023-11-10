@@ -41,13 +41,13 @@ export const HomePage: React.FC = () => {
         >
             <Center>
                 <Image
-                    src="/assets/images/icon2.png"
+                    src="/assets/images/logo3.png"
                     alt="icoin"
                    objectFit="contain"
                     boxSize='160px'
                 />
             </Center>
-            <Center mt={"2rem"} >
+            <Center mt={"2rem"} pos={"relative"} bottom={"0.3rem"} >
                 <video
                     playsInline
                     autoPlay

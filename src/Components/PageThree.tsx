@@ -61,7 +61,7 @@ export const PageThree: React.FC = () => {
         <Container>
             <Center>
                 <Image
-                    src="/assets/images/icon2.png"
+                    src="/assets/images/logo3.png"
                     alt="icoin"
                    objectFit="contain"
                     boxSize='160px'
