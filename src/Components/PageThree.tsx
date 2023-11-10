@@ -81,7 +81,7 @@ export const PageThree: React.FC = () => {
                 <Box>
                     <Box>
                         <Text
-                            fontSize={"1.2rem"}
+                            fontSize={"1rem"}
                             textAlign={"center"}
                             fontFamily={"Bree Serif"}
                         >Based on your answers we can,</Text>
@@ -101,12 +101,12 @@ export const PageThree: React.FC = () => {
                     <Center>
                         <Box>
                             <Text
-                                fontSize={"1.2rem"}
+                                fontSize={"1rem"}
                                 textAlign={"center"}
                                 fontFamily={"Bree Serif"}
                                 color={"white"}>Your Phone is causing  <span style={{ color: "black" }}>1.25 Tonnes</span> </Text>
                             <Text
-                                fontSize={"1.2rem"}
+                                fontSize={"1rem"}
                                 textAlign={"center"}
                                 fontFamily={"Bree Serif"}
                                 color={"white"}
@@ -121,28 +121,28 @@ export const PageThree: React.FC = () => {
                     <Center>
                         <Box>
                             <Text
-                                fontSize={"1.2rem"}
+                                fontSize={"1rem"}
                                 textAlign={"center"}
                                 fontFamily={"Bree Serif"}
                                 color={"white"}>If Every other    <span style={{ color: "yellow" }}>{sch} School</span>
                             </Text>
 
                             <Text
-                                fontSize={"1.2rem"}
+                                fontSize={"1rem"}
                                 textAlign={"center"}
                                 fontFamily={"Bree Serif"}
                                 color={"white"}><span style={{ color: "yellow" }}>Pupil in {area }</span>  is also using their 
                             </Text>
 
                             <Text
-                                fontSize={"1.2rem"}
+                                fontSize={"1rem"}
                                 textAlign={"center"}
                                 fontFamily={"Bree Serif"}
                                 color={"white"}>phone for <span style={{ color: "yellow" }}>{selectedTime} a day</span>,together you  
                             </Text>
 
                             <Text
-                                fontSize={"1.2rem"}
+                                fontSize={"1rem"}
                                 textAlign={"center"}
                                 fontFamily={"Bree Serif"}
                                 color={"white"}>Are causing <span style={{ color: "black" }}>864 Tonnes</span>
@@ -160,7 +160,7 @@ export const PageThree: React.FC = () => {
                     <Center>
                         <Box
                             color={"yellow"}
-                            fontSize={"1.2rem"}
+                            fontSize={"1rem"}
                             textAlign={"center"}
                             fontFamily={"Bree Serif"}
                         >
