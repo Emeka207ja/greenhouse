@@ -200,6 +200,13 @@ export const censusData: iCensus[] = [
     },
     {
         id: 22,
+        name: "Dunston Hill and Whickham East",
+        sec: 593,
+        a_level: 202,
+        uni:327
+    },
+    {
+        id: 22,
         name: "Arthur's Hill",
         sec: 740,
         a_level: 485,
