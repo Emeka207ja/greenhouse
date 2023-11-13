@@ -206,7 +206,7 @@ export const censusData: iCensus[] = [
         uni:327
     },
     {
-        id: 22,
+        id: 23,
         name: "Arthur's Hill",
         sec: 740,
         a_level: 485,
