@@ -73,15 +73,15 @@ export const PageThree: React.FC = () => {
         switch (sch) {
             case "secondary":
                 const dataSec = (censData?.sec!) * tonne;
-                setCensusTonne(dataSec)
+                setCensusTonne(dataSec.toFixed(2))
                 break;
             case "A-level or college":
                 const dataA = (censData?.a_level!) * tonne;
-                setCensusTonne(dataA)
+                setCensusTonne(dataA.toFixed(2))
                 break;
             case "university":
                 const dataU = (censData?.a_level!) * tonne;
-                setCensusTonne(dataU);
+                setCensusTonne(dataU.toFixed(2));
                 break
             default:
                 break;
