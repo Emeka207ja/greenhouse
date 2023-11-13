@@ -212,8 +212,8 @@ export const Pagetwo: React.FC = () => {
                     rightIcon={<GrFormNext />} 
                     bg={"#306e8a"}
                     as={"a"}
-                    // href={!empty ? `/pagethree?sch=${pagetwoQtn.sch}&town=${pagetwoQtn.town}&area=${pagetwoQtn.area}&time=${search}` : "#"}
-                    href={"#"}
+                    href={!empty ? `/pagethree?sch=${pagetwoQtn.sch}&town=${pagetwoQtn.town}&area=${pagetwoQtn.area}&time=${search}` : "#"}
+                    // href={"#"}
                     color={"white"}
                 >
                    next

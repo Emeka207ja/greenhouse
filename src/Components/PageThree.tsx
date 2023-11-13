@@ -9,16 +9,21 @@ import {
     Button
 } from "@chakra-ui/react";
 import { useSearchParams } from "next/navigation";
-import {useState,useEffect,useLayoutEffect} from "react"
+import { useState, useEffect, useLayoutEffect } from "react"
+import { carbonAction } from "./pageThreeData";
+import { censusData } from "./pageThreeData";
 
 
 export const PageThree: React.FC = () => {
-    const [selectedTime,setSelectedTime] = useState("")
+    const [selectedTime, setSelectedTime] = useState("")
+    const [tones, setTones] = useState(0)
+    const [censusTonne,setCensusTonne] = useState(0)
     const searchParams = useSearchParams()
     const time = searchParams.get("time")
     const sch = searchParams.get("sch")
     const town = searchParams.get("town")
     const area = searchParams.get("area")
+    const divisor = 1000000
 
   
 
@@ -57,6 +62,31 @@ export const PageThree: React.FC = () => {
         }
     }, [time])
     console.log(selectedTime)
+
+    useEffect(() => {
+        const timeTone = carbonAction.find(item => item.name === time)
+        const tonne = (timeTone?.value)!/divisor
+        console.log(tonne)
+        setTones(tonne)
+        const censData = censusData.find(item => item.name === area)
+        console.log("data", censData, sch)
+        switch (sch) {
+            case "secondary":
+                const dataSec = (censData?.sec!) * tonne;
+                setCensusTonne(dataSec)
+                break;
+            case "A-level or college":
+                const dataA = (censData?.a_level!) * tonne;
+                setCensusTonne(dataA)
+                break;
+            case "university":
+                const dataU = (censData?.a_level!) * tonne;
+                setCensusTonne(dataU);
+                break
+            default:
+                break;
+        }
+    },[time,area])
     return (
         <Container>
             <Center>
@@ -104,7 +134,7 @@ export const PageThree: React.FC = () => {
                                 fontSize={"1rem"}
                                 textAlign={"center"}
                                 fontFamily={"Bree Serif"}
-                                color={"white"}>Your Phone is causing  <span style={{ color: "black" }}>1.25 Tonnes</span> </Text>
+                                color={"white"}>Your Phone is causing  <span style={{ color: "black" }}>{tones} Tonnes</span> </Text>
                             <Text
                                 fontSize={"1rem"}
                                 textAlign={"center"}
@@ -145,7 +175,7 @@ export const PageThree: React.FC = () => {
                                 fontSize={"1rem"}
                                 textAlign={"center"}
                                 fontFamily={"Bree Serif"}
-                                color={"white"}>Are causing <span style={{ color: "black" }}>864 Tonnes</span>
+                                color={"white"}>Are causing <span style={{ color: "black" }}>{censusTonne} Tonnes</span>
                             </Text>
                         </Box>
                     </Center>
