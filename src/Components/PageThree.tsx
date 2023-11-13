@@ -17,7 +17,7 @@ import { censusData } from "./pageThreeData";
 export const PageThree: React.FC = () => {
     const [selectedTime, setSelectedTime] = useState("")
     const [tones, setTones] = useState(0)
-    const [censusTonne,setCensusTonne] = useState(0)
+    const [censusTonne,setCensusTonne] = useState("0")
     const searchParams = useSearchParams()
     const time = searchParams.get("time")
     const sch = searchParams.get("sch")
@@ -72,16 +72,16 @@ export const PageThree: React.FC = () => {
         console.log("data", censData, sch)
         switch (sch) {
             case "secondary":
-                const dataSec = (censData?.sec!) * tonne;
-                setCensusTonne(dataSec.toFixed(2))
+                const dataSec = ((censData?.sec!) * tonne).toFixed(2);
+                setCensusTonne(dataSec)
                 break;
             case "A-level or college":
-                const dataA = (censData?.a_level!) * tonne;
-                setCensusTonne(dataA.toFixed(2))
+                const dataA =( (censData?.a_level!) * tonne).toFixed(2);
+                setCensusTonne(dataA)
                 break;
             case "university":
-                const dataU = (censData?.a_level!) * tonne;
-                setCensusTonne(dataU.toFixed(2));
+                const dataU = ((censData?.a_level!) * tonne).toFixed(2);
+                setCensusTonne(dataU);
                 break
             default:
                 break;
