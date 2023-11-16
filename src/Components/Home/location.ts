@@ -154,7 +154,7 @@ export const newcastle: ilocation[] = [
     },
     {
         id: 15,
-        name:"Kingston Park South & Newbiggin Hall"
+        name:"Kingston Park South"
     },
     {
         id: 16,

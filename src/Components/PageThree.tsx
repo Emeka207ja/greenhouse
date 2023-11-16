@@ -23,6 +23,7 @@ export const PageThree: React.FC = () => {
     const sch = searchParams.get("sch")
     const town = searchParams.get("town")
     const area = searchParams.get("area")
+    console.log(area)
     const divisor = 1000000
 
   
@@ -61,15 +62,15 @@ export const PageThree: React.FC = () => {
                 break;
         }
     }, [time])
-    console.log(selectedTime)
+    // console.log(selectedTime)
 
     useEffect(() => {
         const timeTone = carbonAction.find(item => item.name === time)
         const tonne = (timeTone?.value)!/divisor
-        console.log(tonne)
+        // console.log(tonne)
         setTones(tonne)
         const censData = censusData.find(item => item.name === area)
-        console.log("data", censData, sch)
+        // console.log("data", censData, sch)
         switch (sch) {
             case "secondary":
                 const dataSec = ((censData?.sec!) * tonne).toFixed(2);
@@ -80,13 +81,15 @@ export const PageThree: React.FC = () => {
                 setCensusTonne(dataA)
                 break;
             case "university":
-                const dataU = ((censData?.a_level!) * tonne).toFixed(2);
+                const dataU = ((censData?.uni!) * tonne).toFixed(2);
+                // console.log(censData?.uni!)
                 setCensusTonne(dataU);
                 break
             default:
                 break;
         }
-    },[time,area])
+    }, [time, area])
+    // console.log(censusTonne)
     return (
         <Container>
             <Center>
