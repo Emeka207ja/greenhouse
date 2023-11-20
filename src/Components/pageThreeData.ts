@@ -214,7 +214,7 @@ export const censusData: iCensus[] = [
     },
     {
         id: 24,
-        name: "Benwell & Scotswood",
+        name: "Benwell and Scotswood",
         sec: 963,
         a_level: 268,
         uni:577
@@ -235,7 +235,7 @@ export const censusData: iCensus[] = [
     },
     {
         id: 27,
-        name: "Callerton & Throckley",
+        name: "Callerton and Throckley",
         sec: 702,
         a_level: 197,
         uni:406
@@ -256,14 +256,14 @@ export const censusData: iCensus[] = [
     },
     {
         id: 30,
-        name: "Dene & South Gosforth",
+        name: "Dene and South Gosforth",
         sec: 620,
         a_level: 224,
         uni:610
     },
     {
         id: 31,
-        name: "Denton & Westerhope",
+        name: "Denton and Westerhope",
         sec: 908,
         a_level: 283,
         uni:723
@@ -277,7 +277,7 @@ export const censusData: iCensus[] = [
     },
     {
         id: 33,
-        name: "Fawdon & West Gosforth",
+        name: "Fawdon and West Gosforth",
         sec: 619,
         a_level: 204,
         uni:459
@@ -401,12 +401,440 @@ export const censusData: iCensus[] = [
         a_level: 206,
         uni:341
     },
-    // {
-    //     id: 7,
-    //     name: "Deckham",
-    //     sec: 692,
-    //     a_level: 232,
-    //     uni:429
-    // },
+    {
+        id: 51,
+        name: "Camperdown",
+        sec: 751,
+        a_level: 233,
+        uni:373
+    },
+    {
+        id: 52,
+        name: "Chirton",
+        sec: 1069,
+        a_level: 288,
+        uni:483
+    },
+    {
+        id: 53,
+        name: "Collingwood",
+        sec: 833,
+        a_level: 264,
+        uni:460
+    },
+    {
+        id: 54,
+        name: "Cullercoats",
+        sec: 530,
+        a_level: 157,
+        uni:255
+    },
+    {
+        id: 55,
+        name: "Howdon",
+        sec: 846,
+        a_level: 259,
+        uni:493
+    },
+    {
+        id: 56,
+        name: "Killingworth",
+        sec: 789,
+        a_level: 208,
+        uni:403
+    },
+    {
+        id: 57,
+        name: "Longbenton",
+        sec: 743,
+        a_level: 193,
+        uni:402
+    },
+    {
+        id: 58,
+        name: "Monkseaton North",
+        sec: 715,
+        a_level: 232,
+        uni:275
+    },
+    {
+        id: 59,
+        name: "Monkseaton South",
+        sec: 745,
+        a_level: 240,
+        uni:341
+    },
+    {
+        id:60,
+        name: "Northumberland",
+        sec: 528,
+        a_level: 152,
+        uni:298
+    },
+    {
+        id: 61,
+        name: "Preston",
+        sec: 432,
+        a_level: 146,
+        uni:211
+    },
+    {
+        id: 62,
+        name: "Deckham",
+        sec: 692,
+        a_level: 232,
+        uni:429
+    },
+    {
+        id: 63,
+        name: "Riverside",
+        sec: 802,
+        a_level: 243,
+        uni:488
+    },
+    {
+        id: 64,
+        name: "St Mary's",
+        sec: 671,
+        a_level: 176,
+        uni:220
+    },
+    {
+        id: 65,
+        name: "Tynemouth",
+        sec: 570,
+        a_level: 164,
+        uni:288
+    },
+    {
+        id: 66,
+        name: "Valley",
+        sec: 1030,
+        a_level: 283,
+        uni:418
+    },
+    {
+        id:67,
+        name: "Wallsend",
+        sec: 616,
+        a_level: 168,
+        uni:411
+    },
+    {
+        id: 68,
+        name: "Weetslade",
+        sec: 601,
+        a_level: 194,
+        uni:284
+    },
+    {
+        id: 69,
+        name: "Whitley Bay",
+        sec: 686,
+        a_level: 218,
+        uni:315
+    },
+    {
+        id: 70,
+        name: "Beacon and Bents",
+        sec: 627,
+        a_level: 204,
+        uni:391
+    },
+    {
+        id: 71,
+        name: "Bede",
+        sec: 539,
+        a_level: 157,
+        uni:302
+    },
+    {
+        id: 72,
+        name: "Biddick and All Saints",
+        sec: 655,
+        a_level: 200,
+        uni:382
+    },
+    {
+        id: 73,
+        name: "Boldon Colliery",
+        sec: 632,
+        a_level: 182,
+        uni:314
+    },
+    {
+        id: 74,
+        name: "Cleadon and East Boldon",
+        sec: 551,
+        a_level: 158,
+        uni:274
+    },
+    {
+        id: 75,
+        name: "Cleadon Park",
+        sec: 577,
+        a_level: 156,
+        uni:273
+    },
+    {
+        id: 76,
+        name: "Fellgate and Hedworth",
+        sec: 503,
+        a_level: 181,
+        uni:271
+    },
+    {
+        id: 77,
+        name: "Harton",
+        sec: 603,
+        a_level: 181,
+        uni:337
+    },
+    {
+        id: 78,
+        name: "Hebburn North",
+        sec: 648,
+        a_level: 190,
+        uni:427
+    },
+    {
+        id: 79,
+        name: "Hebburn South",
+        sec: 615,
+        a_level: 165,
+        uni:285
+    },
+    {
+        id: 80,
+        name: "Horsley Hill",
+        sec: 585,
+        a_level: 184,
+        uni:308
+    },
+    {
+        id: 81,
+        name: "Monkton",
+        sec: 497,
+        a_level: 180,
+        uni:333
+    },
+    {
+        id: 82,
+        name: "Primrose",
+        sec: 577,
+        a_level: 160,
+        uni:325
+    },
+    {
+        id: 83,
+        name: "Simonside and Rekendyke",
+        sec: 516,
+        a_level: 181,
+        uni:443
+    },
+    {
+        id: 84,
+        name: "Westoe",
+        sec: 486,
+        a_level: 166,
+        uni:302
+    },
+    {
+        id: 85,
+        name: "West Park",
+        sec: 387,
+        a_level: 133,
+        uni:278
+    },
+    {
+        id: 86,
+        name: "Whitburn and Marsden",
+        sec: 531,
+        a_level: 144,
+        uni:253
+    },
+    {
+        id: 87,
+        name: "Whiteleas",
+        sec: 562,
+        a_level: 156,
+        uni:321
+    },
+    {
+        id: 88,
+        name: "Barnes",
+        sec: 653,
+        a_level: 216,
+        uni:449
+    },
+    {
+        id: 89,
+        name: "Castle",
+        sec: 783,
+        a_level: 232,
+        uni:431
+    },
+    {
+        id: 90,
+        name: "Copt Hill",
+        sec: 719,
+        a_level: 237,
+        uni:474
+    },
+    {
+        id: 91,
+        name: "Doxford",
+        sec: 611,
+        a_level: 186,
+        uni:323
+    },
+    {
+        id: 92,
+        name: "Fulwell",
+        sec: 612,
+        a_level: 198,
+        uni:378
+    },
+    {
+        id: 93,
+        name: "Hendon",
+        sec: 746,
+        a_level: 275,
+        uni:1151
+    },
+    {
+        id: 94,
+        name: "Hetton",
+        sec: 784,
+        a_level: 233,
+        uni:462
+    },
+    {
+        id: 95,
+        name: "Houghton",
+        sec: 816,
+        a_level: 218,
+        uni:456
+    },
+    {
+        id: 96,
+        name: "Millfield",
+        sec: 868,
+        a_level: 341,
+        uni:1021
+    },
+    {
+        id: 97,
+        name: "Pallion",
+        sec: 779,
+        a_level: 233,
+        uni:458
+    },
+    {
+        id: 98,
+        name: "Redhill",
+        sec: 781,
+        a_level: 257,
+        uni:489
+    },
+    {
+        id: 99,
+        name: "Ryhope",
+        sec: 855,
+        a_level: 230,
+        uni:491
+    },
+    {
+        id: 100,
+        name: "St Anne's",
+        sec: 829,
+        a_level: 243,
+        uni:427
+    },
+    {
+        id: 101,
+        name: "St Chad's",
+        sec: 503,
+        a_level: 159,
+        uni:323
+    },
+    {
+        id: 102,
+        name: "St Michael's",
+        sec: 618,
+        a_level: 228,
+        uni:486
+    },
+    {
+        id: 103,
+        name: "St Peter's",
+        sec: 497,
+        a_level: 147,
+        uni:542
+    },
+    {
+        id: 104,
+        name: "Sandhill",
+        sec: 804,
+        a_level: 227,
+        uni:451
+    },
+    {
+        id: 105,
+        name: "Shiney Row",
+        sec: 943,
+        a_level: 281,
+        uni:519
+    },
+    {
+        id: 106,
+        name: "Silksworth",
+        sec: 696,
+        a_level: 207,
+        uni:429
+    },
+    {
+        id: 107,
+        name: "Southwick",
+        sec: 718,
+        a_level: 211,
+        uni:395
+    },
+    {
+        id: 108,
+        name: "Washington Central",
+        sec: 736,
+        a_level: 227,
+        uni:355
+    },
+    {
+        id: 109,
+        name: "Washington East",
+        sec: 824,
+        a_level: 229,
+        uni:418
+    },
+    {
+        id: 110,
+        name: "Washington North",
+        sec: 796,
+        a_level: 219,
+        uni:455
+    },
+    {
+        id: 111,
+        name: "Washington South",
+        sec: 666,
+        a_level: 211,
+        uni:346
+    },
+    {
+        id: 112,
+        name: "Washington West",
+        sec: 833,
+        a_level: 260,
+        uni:480
+    },
+   
    
 ]

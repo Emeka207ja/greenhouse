@@ -102,7 +102,7 @@ export const newcastle: ilocation[] = [
     },
     {
         id: 2,
-        name:"Benwell & Scotswood"
+        name:"Benwell and Scotswood"
     },
     {
         id: 3,
@@ -114,7 +114,7 @@ export const newcastle: ilocation[] = [
     },
     {
         id: 5,
-        name:"Callerton & Throckley"
+        name:"Callerton and Throckley"
     },
     {
         id: 6,
@@ -126,11 +126,11 @@ export const newcastle: ilocation[] = [
     },
     {
         id: 8,
-        name:"Dene & South Gosforth"
+        name:"Dene and South Gosforth"
     },
     {
         id: 9,
-        name:"Denton & Westerhope"
+        name:"Denton and Westerhope"
     },
     {
         id: 10,
@@ -138,7 +138,7 @@ export const newcastle: ilocation[] = [
     },
     {
         id: 11,
-        name:"Fawdon & West Gosforth"
+        name:"Fawdon and West Gosforth"
     },
     {
         id: 12,
