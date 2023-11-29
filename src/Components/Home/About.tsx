@@ -23,11 +23,10 @@ export const About: React.FC = () => {
         <Container>
             <Center>
                <Image
-                src="/assets/images/icon4.png"
-                alt="icoin"
-                objectFit="contain"
-                borderRadius='full'
-                boxSize='160px'
+                    src="/assets/images/logo4.png"
+                    alt="icoin"
+                   objectFit="contain"
+                    boxSize='160px'
                 />
             </Center>
             <Heading textAlign={"center"} color={"#0174BE"} fontSize={"1.5rem"}>Making climate action easy</Heading>
