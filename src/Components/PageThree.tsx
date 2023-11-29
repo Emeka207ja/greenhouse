@@ -57,6 +57,22 @@ export const PageThree: React.FC = () => {
             case "3hr":
                 setSelectedTime("3 hours")
                 break;
+            
+            case "4hr":
+                setSelectedTime("4 hours")
+                break;
+            case "5hr":
+                setSelectedTime("5 hours")
+                break;
+            case "6hr":
+                setSelectedTime("6 hours")
+                break;
+            case "7hr":
+                setSelectedTime("7 hours")
+                break;
+            case "8hr":
+                setSelectedTime("8 hours")
+                break;
         
             default:
                 break;
@@ -94,7 +110,7 @@ export const PageThree: React.FC = () => {
         <Container>
             <Center>
                 <Image
-                    src="/assets/images/logo3.png"
+                    src="/assets/images/logo4.png"
                     alt="icoin"
                    objectFit="contain"
                     boxSize='160px'

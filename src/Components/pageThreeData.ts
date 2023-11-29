@@ -48,6 +48,31 @@ export const carbonAction: iCarbonAction[] = [
         name: "3hr",
         value:3750000
     },
+    {
+        id: 8,
+        name: "4hr",
+        value:5000000
+    },
+    {
+        id: 9,
+        name: "5hr",
+        value:6250000
+    },
+    {
+        id: 10,
+        name: "6hr",
+        value:7500000
+    },
+    {
+        id: 11,
+        name: "7hr",
+        value:8750000
+    },
+    {
+        id: 12,
+        name: "8hr",
+        value:11000000
+    },
 ]
 
 export const censusData: iCensus[] = [

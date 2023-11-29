@@ -82,7 +82,7 @@ export const Pagetwo: React.FC = () => {
         <Container>
             <Center>
                 <Image
-                    src="/assets/images/logo3.png"
+                    src="/assets/images/logo4.png"
                     alt="icoin"
                    objectFit="contain"
                     borderRadius='full'

@@ -41,7 +41,7 @@ export const HomePage: React.FC = () => {
         >
             <Center>
                 <Image
-                    src="/assets/images/logo3.png"
+                    src="/assets/images/logo4.png"
                     alt="icoin"
                    objectFit="contain"
                     boxSize='160px'
@@ -119,6 +119,11 @@ export const HomePage: React.FC = () => {
                         <option value={"1hr"}>1 hour</option>
                         <option value={"2hr"}>2 hours</option>
                         <option value={"3hr"}>3 hours</option>
+                        <option value={"4hr"}>4 hours</option>
+                        <option value={"5hr"}>5 hours</option>
+                        <option value={"6hr"}>6 hours</option>
+                        <option value={"7hr"}>7 hours</option>
+                        <option value={"8hr"}>8 hours</option>
                 </Select>
                 </FormControl>
             </form>  

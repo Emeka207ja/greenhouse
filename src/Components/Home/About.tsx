@@ -34,19 +34,27 @@ export const About: React.FC = () => {
             <Heading textAlign={"center"} fontSize={"1rem"} mt={"0.5rem"}>ABOUT BLUE SKY </Heading>
 
             <Center mt={"0.5rem"}>
-                <Text textAlign={"center"}>Blue Sky is the creation of two academics and two students at the University of Sunderland, in North East England.  </Text>
+                <Text textAlign={"center"}>When people unite and act together, they take control of their own
+                    destiny.
+                </Text>
             </Center>
 
             <Center mt={"0.5rem"}>
-                <Text textAlign={"center"}>Academic tutor and environmental journalist Paul Taylor took the idea to Computer Science lecturer Randa Almadhoun. </Text>
+                <Text textAlign={"center"}>With a climate crisis threatening all of us, now is a moment to do
+                    exactly that.
+                </Text>
             </Center>
 
             <Center mt={"0.5rem"}>
-                <Text textAlign={"center"}>With encouragement and support from senior colleagues, Randa and Paul were able to turn it into a practical development project for Computer Science Masters students Chinenye Onoh and Sahni Roushan.  </Text>
+                <Text textAlign={"center"}>
+                    If you feel there’s nothing you can do to help, ask yourself this:
+                    who actually creates and destroys governments, giant companies
+                    or even whole industries?
+                </Text>
             </Center>
 
             <Center mt={"0.5rem"}>
-                <Text textAlign={"center"}> While Paul brought his creative skills to bear in setting out the look and functionality of Blue Sky, Chinenye and Sahni handled all the computer programming and coding to bring it to life, under Randa’s technical supervision.</Text>
+                <Text textAlign={"center"}> Answer: we do – the people!</Text>
             </Center>
 
             <Center mt={"0.5rem"}>
@@ -58,16 +66,49 @@ export const About: React.FC = () => {
             </Center>
 
             <Center mt={"0.5rem"}>
-                <Text textAlign={"center"}>What the team have developed so far is a small-scale app covering just the Tyne and Wear area, to ‘prove the concept’ of Blue Sky. </Text>
+                <Text textAlign={"center"}>The problem is too many of us think we are helpless to affect the
+                    climate crisis: we’ve been encouraged to forget our ‘people power’.
+                </Text>
             </Center>
 
             <Center mt={"0.5rem"}>
-                <Text textAlign={"center"}>But they plan to expand its scope to cover all of the UK, and help people right across the nation make simple choices which will help fight climate change.  
+                <Text textAlign={"center"}>BlueSky is a tool to help reconnect us, at a moment when the
+                    choices we all make now will shape all our futures – maybe even
+                    our survival. 
                 </Text>
             </Center>
 
             <Center mt={"0.5rem"} mb={"2rem"}>
-                <Text textAlign={"center"}>All that’s needed is a little more Blue Sky thinking! </Text>
+                <Text textAlign={"center"}>It is designed to show you how your simple, small choice can very
+                    quickly create a huge impact if other people also act on it.</Text>
+            </Center>
+
+            <Center mt={"0.5rem"} mb={"2rem"}>
+                <Text textAlign={"center"}>It doesn’t take huge personal sacrifice, just a shift in our priorities.</Text>
+            </Center>
+
+            <Center mt={"0.5rem"} mb={"2rem"}>
+                <Text textAlign={"center"}>For example, did you know that if everyone aged 10 and up in the
+                    UK watched just one hour’s less TV each week, we’d stop the
+                    release of well over half a million tonnes of greenhouse gases.
+                </Text>
+            </Center>
+
+            <Center mt={"0.5rem"} mb={"2rem"}>
+                <Text textAlign={"center"}>That’s like taking more than 122,000 cars off the road!
+                </Text>
+            </Center>
+
+            <Center mt={"0.5rem"} mb={"2rem"}>
+                <Text textAlign={"center"}>One simple, small choice shared by everyone = a big impact.
+                </Text>
+            </Center>
+
+            <Center mt={"0.5rem"} mb={"9rem"}>
+                <Text textAlign={"center"}>* BlueSky has been developed as a Masters in Computer
+                    Science project by a team of two teachers and two students at
+                    the University of Sunderland: academic tutor Paul Taylor,
+                </Text>
             </Center>
             
             <BackToTopButton route={pathd}/>
