@@ -25,7 +25,7 @@ export const About: React.FC = () => {
                <Image
                 src="/assets/images/icon4.png"
                 alt="icoin"
-                objectFit="cover"
+                objectFit="contain"
                 borderRadius='full'
                 boxSize='160px'
                 />
