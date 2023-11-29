@@ -27,7 +27,7 @@ export const About: React.FC = () => {
                 alt="icoin"
                 objectFit="cover"
                 borderRadius='full'
-                boxSize='100px'
+                boxSize='160px'
                 />
             </Center>
             <Heading textAlign={"center"} color={"#0174BE"} fontSize={"1.5rem"}>Making climate action easy</Heading>
@@ -78,7 +78,7 @@ export const About: React.FC = () => {
                 </Text>
             </Center>
 
-            <Center  mb={"2rem"} mb={"2rem"}>
+            <Center   mb={"2rem"}>
                 <Text textAlign={"center"}>It is designed to show you how your simple, small choice can very
                     quickly create a huge impact if other people also act on it.</Text>
             </Center>
