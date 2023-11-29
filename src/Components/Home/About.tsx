@@ -23,7 +23,7 @@ export const About: React.FC = () => {
         <Container>
             <Center>
                <Image
-                src="/assets/images/icon2.png"
+                src="/assets/images/icon4.png"
                 alt="icoin"
                 objectFit="cover"
                 borderRadius='full'
