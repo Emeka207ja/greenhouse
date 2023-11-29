@@ -39,13 +39,13 @@ export const About: React.FC = () => {
                 </Text>
             </Center>
 
-            <Center mt={"0.5rem"}>
+            <Center  mb={"2rem"}>
                 <Text textAlign={"center"}>With a climate crisis threatening all of us, now is a moment to do
                     exactly that.
                 </Text>
             </Center>
 
-            <Center mt={"0.5rem"}>
+            <Center  mb={"2rem"}>
                 <Text textAlign={"center"}>
                     If you feel there’s nothing you can do to help, ask yourself this:
                     who actually creates and destroys governments, giant companies
@@ -53,58 +53,58 @@ export const About: React.FC = () => {
                 </Text>
             </Center>
 
-            <Center mt={"0.5rem"}>
+            <Center  mb={"2rem"}>
                 <Text textAlign={"center"}> Answer: we do – the people!</Text>
             </Center>
 
-            <Center mt={"0.5rem"}>
+            <Center  mb={"2rem"}>
                 <Text textAlign={"center"}> What the team created over four months of hard work is the app you are using now.</Text>
             </Center>
 
-            <Center mt={"0.5rem"}>
+            <Center  mb={"2rem"}>
                 <Text textAlign={"center"}>But there’s more to do. </Text>
             </Center>
 
-            <Center mt={"0.5rem"}>
+            <Center  mb={"2rem"}>
                 <Text textAlign={"center"}>The problem is too many of us think we are helpless to affect the
                     climate crisis: we’ve been encouraged to forget our ‘people power’.
                 </Text>
             </Center>
 
-            <Center mt={"0.5rem"}>
+            <Center  mb={"2rem"}>
                 <Text textAlign={"center"}>BlueSky is a tool to help reconnect us, at a moment when the
                     choices we all make now will shape all our futures – maybe even
                     our survival. 
                 </Text>
             </Center>
 
-            <Center mt={"0.5rem"} mb={"2rem"}>
+            <Center  mb={"2rem"} mb={"2rem"}>
                 <Text textAlign={"center"}>It is designed to show you how your simple, small choice can very
                     quickly create a huge impact if other people also act on it.</Text>
             </Center>
 
-            <Center mt={"0.5rem"} mb={"2rem"}>
+            <Center  mb={"2rem"}>
                 <Text textAlign={"center"}>It doesn’t take huge personal sacrifice, just a shift in our priorities.</Text>
             </Center>
 
-            <Center mt={"0.5rem"} mb={"2rem"}>
+            <Center  mb={"2rem"}>
                 <Text textAlign={"center"}>For example, did you know that if everyone aged 10 and up in the
                     UK watched just one hour’s less TV each week, we’d stop the
                     release of well over half a million tonnes of greenhouse gases.
                 </Text>
             </Center>
 
-            <Center mt={"0.5rem"} mb={"2rem"}>
+            <Center  mb={"2rem"}>
                 <Text textAlign={"center"}>That’s like taking more than 122,000 cars off the road!
                 </Text>
             </Center>
 
-            <Center mt={"0.5rem"} mb={"2rem"}>
+            <Center  mb={"2rem"}>
                 <Text textAlign={"center"}>One simple, small choice shared by everyone = a big impact.
                 </Text>
             </Center>
 
-            <Center mt={"0.5rem"} mb={"9rem"}>
+            <Center  mb={"2rem"}>
                 <Text textAlign={"center"}>* BlueSky has been developed as a Masters in Computer
                     Science project by a team of two teachers and two students at
                     the University of Sunderland: academic tutor Paul Taylor,
