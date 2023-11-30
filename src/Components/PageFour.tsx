@@ -131,7 +131,9 @@ export const PageFour: React.FC = () => {
                 textColor={"white"}
                 bg={"#023e8a"}
                 w={"full"}
-                mb={ "2rem"}
+                mb={"2rem"}
+                as={"a"}
+                href="/pagefive"
             >show me!</Button>
         </Container>
     )
