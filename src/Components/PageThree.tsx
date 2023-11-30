@@ -227,7 +227,7 @@ export const PageThree: React.FC = () => {
                     src="/assets/images/phone.png"
                     alt="icoin"
                    objectFit="contain"
-                    boxSize='200px'
+                    boxSize='250px'
                 />
             </Center>
             <Center >
@@ -236,6 +236,8 @@ export const PageThree: React.FC = () => {
                     textColor={"white"}
                     pos={"relative"}
                     bottom={"4.5rem"}
+                    as={"a"}
+                    href="/pagefour"
                 >How is that possible?</Button>
            </Center>
         </Container>
