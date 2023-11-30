@@ -52,7 +52,7 @@ export const PageFour: React.FC = () => {
                 >
                     <Box
                         color={"white"}
-                        fontSize={"1rem"}
+                        fontSize={"0.9rem"}
                         textAlign={"center"}
                     >
                         <Text>your phone - and the huge network it </Text>
@@ -68,7 +68,7 @@ export const PageFour: React.FC = () => {
                 >
                     <Box
                         color={"black"}
-                        fontSize={"1rem"}
+                        fontSize={"0.9rem"}
                         textAlign={"center"}
                     >
                         <Text>Generating electricity produces</Text>
@@ -88,7 +88,7 @@ export const PageFour: React.FC = () => {
                 >
                     <Box
                         color={"white"}
-                        fontSize={"1rem"}
+                        fontSize={"0.8rem"}
                         textAlign={"center"}
                     >
                         <Text>Greenhouse Gases are a threat to all life</Text>
