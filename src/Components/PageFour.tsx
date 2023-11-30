@@ -129,7 +129,7 @@ export const PageFour: React.FC = () => {
             <Button
                 mt={"1rem"}
                 textColor={"white"}
-                bg={"blue"}
+                bg={"#023e8a"}
                 w={"full"}
                 mb={ "2rem"}
             >show me!</Button>
