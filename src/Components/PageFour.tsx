@@ -35,7 +35,7 @@ export const PageFour: React.FC = () => {
                     loop
                     height="360"
                 >
-                    <source src="/assets/video/vd2.mp4" type="video/mp4" />
+                    <source src="/assets/video/smokevid.mp4" type="video/mp4" />
                 </video>
             </Center>
             <Heading
