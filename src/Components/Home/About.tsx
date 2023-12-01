@@ -106,7 +106,12 @@ export const About: React.FC = () => {
             <Center  mb={"2rem"}>
                 <Text textAlign={"center"}>* BlueSky has been developed as a Masters in Computer
                     Science project by a team of two teachers and two students at
-                    the University of Sunderland: academic tutor Paul Taylor,
+                    the University of Sunderland: academic tutor Paul Taylor,lecturer Randa Almadhoun, and students Chinenye Onoh and Sahni Roushan. 
+                </Text>
+            </Center>
+
+            <Center  mb={"2rem"}>
+                <Text textAlign={"center"}>* BlueSky uses external emissions calculation and comparison sources.
                 </Text>
             </Center>
             
