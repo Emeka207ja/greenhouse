@@ -12,11 +12,13 @@ import { useSearchParams } from "next/navigation";
 import { useState, useEffect, useLayoutEffect } from "react"
 import { carbonAction } from "./pageThreeData";
 import { censusData } from "./pageThreeData";
+import EmissionToCarOffRoadEquivalence from "../utils/carsEmission"
 
 
 export const PageThree: React.FC = () => {
     const [selectedTime, setSelectedTime] = useState("")
     const [tones, setTones] = useState(0)
+    const [carsOffRoad,setCarsOffRoad] = useState("")
     const [censusTonne,setCensusTonne] = useState("0")
     const searchParams = useSearchParams()
     const time = searchParams.get("time")
@@ -79,6 +81,8 @@ export const PageThree: React.FC = () => {
         }
     }, [time])
     // console.log(selectedTime)
+    // const val = EmissionToCarOffRoadEquivalence("10000")
+    // console.log("test",val)
 
     useEffect(() => {
         const timeTone = carbonAction.find(item => item.name === time)
@@ -91,15 +95,18 @@ export const PageThree: React.FC = () => {
             case "secondary":
                 const dataSec = ((censData?.sec!) * tonne).toFixed(2);
                 setCensusTonne(dataSec)
+                setCarsOffRoad(EmissionToCarOffRoadEquivalence(dataSec))
                 break;
             case "A-level or college":
                 const dataA =( (censData?.a_level!) * tonne).toFixed(2);
                 setCensusTonne(dataA)
+                setCarsOffRoad(EmissionToCarOffRoadEquivalence(dataA))
                 break;
             case "university":
                 const dataU = ((censData?.uni!) * tonne).toFixed(2);
                 // console.log(censData?.uni!)
                 setCensusTonne(dataU);
+                setCarsOffRoad(EmissionToCarOffRoadEquivalence(dataU))
                 break
             default:
                 break;
@@ -213,8 +220,8 @@ export const PageThree: React.FC = () => {
                             textAlign={"center"}
                             fontFamily={"Bree Serif"}
                         >
-                            <Text>Thats the same as 500</Text>
-                            <Text>average UK cars produced</Text>
+                            <Text fontSize={"1.3rem"}>{carsOffRoad }</Text>
+                            
                         </Box>
                     </Center>
                 </CardBody>
@@ -237,8 +244,8 @@ export const PageThree: React.FC = () => {
                     pos={"relative"}
                     bottom={"4.5rem"}
                     as={"a"}
-                    href="#"
-                    // href="/pagefour"
+                    // href="#"
+                    href="/pagefour"
                 >How is that possible?</Button>
            </Center>
         </Container>
