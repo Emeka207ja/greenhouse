@@ -71,23 +71,21 @@ export const PageSix: React.FC = () => {
                     fontSize={"1.1rem"}
                 >
                     <Center>
-                         <Text>If you used your phone for just</Text>
+                        <Box>
+                            <Text>If you used your phone for just</Text>
+                            <Text>
+                                <span style={{ color: "#fcca46" }}>({time}) { ""}</span>
+                                <span> over a year</span>
+                            </Text>
+
+                            <Text>
+                                <span>you would stop</span>{ ""}
+                                <span style={{ color: "black" }}> {cost} KILOGRAMS</span>
+                            </Text>
+                            <Text>Of Greenhouse Gases</Text>
+                         </Box>
                    </Center>
-                    <Center>
-                        <Text>
-                            <span style={{ color: "#fcca46" }}>({time}) { ""}</span>
-                            <span> over a year</span>
-                    </Text>
-                    </Center>
-                    <Center>
-                         <Text>
-                            <span>you would stop</span>{ ""}
-                           <span style={{ color: "black" }}> {cost} KILOGRAMS</span>
-                        </Text>
-                    </Center>
-                    <Center>
-                        <Text>Of Greenhouse Gases</Text>
-                    </Center>
+                   
                 </CardBody>
             </Card>
 
@@ -100,37 +98,29 @@ export const PageSix: React.FC = () => {
                     fontSize={"1.1rem"}
                 >
                     <Center>
-                        <Text>
-                            <span>If every other</span> {""}
-                            <span style={{ color: "#fcca46" }}>({sch})</span>
-                        </Text>
+                        <Box>
+                            <Text>If every other <span style={{ color: "#fcca46" }}>({sch})</span></Text> 
+                            <Text>
+                                <span>in</span> {""}
+                                <span style={{ color: "#fcca46" }}>({town}) { ""}</span>
+                                <span>did the same  </span>
+                            </Text>
+                            <Text>together you would stop an amazing</Text>
+                             <Text>
+                                <span style={{ color: "black" }}>({totalTonne} tonnes)</span>
+                                <span > of Greenhouse</span>
+                            </Text>
+                            <Text> Gases</Text>
+                        </Box>
                    </Center>
-                    <Center>
-                        <Text>
-                            <span>in</span> {""}
-                            <span style={{ color: "#fcca46" }}>({town}) { ""}</span>
-                            <span>did the same  </span>
-                        </Text>
-                    </Center>
-                    <Center>
-                         <Text>together you would stop an amazing</Text>
-                    </Center>
-                    <Center>
-                        <Text>
-                            <span style={{ color: "black" }}>({totalTonne} tonnes)</span>
-                           <span > of Greenhouse</span>
-                        </Text>
-                    </Center>
-                    <Center>
-                        <Text> Gases</Text>
-                    </Center>
+                   
                 </CardBody>
             </Card>
             <Card
                 mt={"1rem"}
                 bg={"#306e8a"}
                 color={"#ffc300"}
-                fontSize = "1.5rem"
+                fontSize = "1.1rem"
             >
                 <CardBody>
                     <Text textAlign={"center"}>{emisionMsg}</Text>                   
@@ -145,7 +135,7 @@ export const PageSix: React.FC = () => {
                 mt = {"1rem"}
             >
                 <Box
-                    fontSize={"1.5rem"}
+                    fontSize={"1rem"}
                     fontStyle={"bold"}
                 >
                     <Text>That means you can help heal</Text>
