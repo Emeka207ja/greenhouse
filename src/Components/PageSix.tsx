@@ -68,10 +68,12 @@ export const PageSix: React.FC = () => {
                 color={"white"}
             >
                 <CardBody
-                    fontSize={"1.1rem"}
+                    fontSize={"1rem"}
                 >
                     <Center>
-                        <Box>
+                        <Box
+                            textAlign={"center"}
+                        >
                             <Text>If you used your phone for just</Text>
                             <Text>
                                 <span style={{ color: "#fcca46" }}>({time}) { ""}</span>
@@ -95,10 +97,12 @@ export const PageSix: React.FC = () => {
                 color={"white"}
             >
                 <CardBody
-                    fontSize={"1.1rem"}
+                    fontSize={"1rem"}
                 >
                     <Center>
-                        <Box>
+                        <Box
+                            textAlign={"center"}
+                        >
                             <Text>If every other <span style={{ color: "#fcca46" }}>({sch})</span></Text> 
                             <Text>
                                 <span>in</span> {""}
