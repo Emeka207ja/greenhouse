@@ -8,10 +8,20 @@ import {
     Text,
     Image,
     Select,
-    FormControl
+    FormControl,
+    Button
 } from "@chakra-ui/react"
 import { AiOutlineCaretDown } from "react-icons/ai";
+import { useState,ChangeEvent } from "react";
+import { useSearchParams } from "next/navigation";
 export const PageFive: React.FC = () => {
+    const searchParams = useSearchParams()
+    const sch = searchParams.get("sch")
+    const town = searchParams.get("town")
+    const [selected, setSelected] = useState("")
+    const handleSelected = (e: ChangeEvent<HTMLSelectElement>) => {
+        setSelected(e.target.value)
+    }
     return (
         <Container>
              <Center>
@@ -73,11 +83,12 @@ export const PageFive: React.FC = () => {
                 <FormControl>
                     <Select
                         fontSize={"1.2rem"}
-                      
                         style={{ borderColor: "#306e8a", backgroundColor: "", textAlign: "center" }}
                         iconSize="6rem"
                         iconColor="#306e8a"
-                        icon={<AiOutlineCaretDown/>}
+                        icon={<AiOutlineCaretDown />}
+                        value={selected}
+                        onChange={handleSelected}
                     >
                         <option value={""} style={{textAlign:"center"}}>please choose</option>
                         <option value={"10m"}>10 mins less per day</option>
@@ -86,6 +97,15 @@ export const PageFive: React.FC = () => {
                         <option value={"1hr"}>1 hour less per day</option>
                 </Select>
                 </FormControl>
+                <Button
+                    type="submit"
+                    w="full"
+                    textColor={"white"}
+                    bg={"#023e8a"}
+                    mt={"1rem"}
+                    as={"a"}
+                    href={`/pagesix?selected=${selected}&sch=${sch}&town=${town}`}
+                >Next</Button>
             </form>  
         </Container>
     )

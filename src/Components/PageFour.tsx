@@ -10,7 +10,11 @@ import {
     Button
 } from "@chakra-ui/react"
 
+import { useSearchParams } from "next/navigation"
 export const PageFour: React.FC = () => {
+    const searchParams = useSearchParams()
+    const sch = searchParams.get("sch")
+    const town = searchParams.get("town")
     return (
         <Container>
             <Center>
@@ -133,8 +137,8 @@ export const PageFour: React.FC = () => {
                 w={"full"}
                 mb={"2rem"}
                 as={"a"}
-                // href="/pagefive"
-                href="#"
+                href={`/pagefive?sch=${sch}&town=${town}`}
+                // href="#"
             >show me!</Button>
         </Container>
     )
