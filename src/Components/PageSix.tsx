@@ -11,7 +11,7 @@ import {
 import { useSearchParams } from "next/navigation"
 import { phoneUsageReduced,carbonCost,carbonTonne } from "@/utils/phoneUsageReduced"
 import { useState, useEffect } from "react"
-import EmissionCarNtrashEquivalence from "@/utils/carNtrash"
+import EmissionCarNtrashNTrashEquivalence from "@/utils/carNtrash"
 
 export const PageSix: React.FC = () => {
     const searchParams = useSearchParams()
@@ -30,7 +30,7 @@ export const PageSix: React.FC = () => {
             setCost(carbonCost(selected))
             const total = parseFloat(carbonTonne(selected,town,sch))
             setTotalTonne(total)
-            setEmisionMsg(EmissionCarNtrashEquivalence(total))
+            setEmisionMsg(EmissionCarNtrashNTrashEquivalence(total))
         } else {
             setTime(phoneUsageReduced("default time"))
             setCost(carbonCost("4m"))
@@ -132,7 +132,11 @@ export const PageSix: React.FC = () => {
             </Card>
 
             <Center>
-                <Image src = "/assets/images/trashncar.png"/>
+                {
+                    emisionMsg.includes("car") ? <Image src="/assets/images/car.png" />
+                        : emisionMsg.includes("forest") ? <Image src="/assets/images/tree.png" />
+                            : emisionMsg.includes("domestic") && <Image src="/assets/images/trash.png" />
+                }
             </Center>
 
             <Center

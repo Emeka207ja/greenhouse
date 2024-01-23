@@ -14,6 +14,7 @@ import {
 import {GrFormNext} from "react-icons/gr"
 import { ChangeEvent, useState, useRef, useEffect } from "react";
 import { AiOutlineCaretDown } from "react-icons/ai";
+import { fetchData } from "../testFech";
 export const HomePage: React.FC = () => {
     const videoRef = useRef<HTMLVideoElement>()
     const isMobile = useBreakpointValue({ base: true, sm: false, md: false, lg: false, xl: false });
@@ -27,6 +28,7 @@ export const HomePage: React.FC = () => {
     }
     useEffect(() => {
         sessionStorage.setItem("page", "/");
+        // const val = fetchData()
     }, [])
    
     if(isMobile){
@@ -34,6 +36,7 @@ export const HomePage: React.FC = () => {
     }else{
         console.log("desktop")
     }
+    
     
     return (
         <Container

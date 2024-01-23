@@ -137,8 +137,8 @@ export const PageFour: React.FC = () => {
                 w={"full"}
                 mb={"2rem"}
                 as={"a"}
-                // href={`/pagefive?sch=${sch}&town=${town}`}
-                href="#"
+                href={`/pagefive?sch=${sch}&town=${town}`}
+                
             >show me!</Button>
         </Container>
     )
